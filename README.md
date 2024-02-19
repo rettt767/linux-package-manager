@@ -58,6 +58,14 @@ lpk help
 lpk -h
 ```
 
+- **显示版本**
+```shell
+lpk version
+```
+```shell
+lpk -v
+```
+
 ## 实现基础逻辑
 - **打包方式**  
 采用tar打包方式，将文件打包入tar.xz的包中
