@@ -27,10 +27,10 @@ Linux中卸载已安装的安装包
 
 - **打包安装包**
 ```shell
-lpk pkg [directory]
+lpk pkg [--main] [mainRunner] [--config] [configDirectory] [--icon] [iconFile] [directory]
 ```
 ``` shell
-lpk -P [directory]
+lpk -P [--main] [mainRunner] [--config] [configDirectory] [--icon] [iconFile] [directory]
 ```
 tips: 此指令会在使用的文件目录下生成一个lpk包
 

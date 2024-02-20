@@ -5,8 +5,9 @@
 #include <string.h>
 #include "operation/help.h"
 #include "operation/version.h"
+#include "io/write.h"
 
-void chose_operation(char* argv[]);
-
+void choose_operation(char* argv[]);
+void choose_pkg_operation(char* argv[]);
 
 #endif
