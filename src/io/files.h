@@ -21,12 +21,19 @@ typedef struct FILE_INFO {
     char file_name[FILENAME_LEN];
     long size;
     char path[PATH_NAME_LEN];
-    char type[50];
-} fileInfo;
+    long start_position;
+    long end_position;
+    struct FILE_INFO *next;
+} FileInfo;
 
 char* root_path;
 char root_path_ver[500];
 
 void get_dirs(const char * path);
+
+FileInfo *infos;
+
+FileInfo *init();
+FileInfo *add(char file_name[], long size, char path[], FileInfo *fileInfo);
 
 #endif

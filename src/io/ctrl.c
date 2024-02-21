@@ -64,7 +64,10 @@ void get_dirs(const char* path) {
         char* res = strstr(path2, root_path_ver);
 
         if (!S_ISDIR(st.st_mode)) {
-            printf("name: %s type: %ld size: %ld path: %s\n", dirp->d_name, st.st_mode, st.st_size, res);
+            // printf("name: %s size: %ld path: %s\n", dirp->d_name, st.st_size, res);
+            char paths[500];
+            sprintf(paths, "%s", res); 
+            infos = add(dirp->d_name, st.st_size, paths, infos);
         }
         
         if (S_ISDIR(st.st_mode)) {
@@ -74,6 +77,8 @@ void get_dirs(const char* path) {
     closedir(dir);
 
 }
+
+
 // The INFO
 // int main() {
 //     get_dirs("/home/retriblet/code/projects/java/market-server");
