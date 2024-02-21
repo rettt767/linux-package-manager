@@ -103,3 +103,27 @@ lpk -v
 - `**.config`：安装的应用的配置文件  
 - `icons`：文件夹，放置安装应用所需要的图标
 - `icon.list`：描述了文件所需要的图标
+
+## 工程结构
+
+```text
+|---src
+    |---io
+    |   |---file
+    |   |---read
+    |   |---write
+    |
+    |---operation
+    |   |---help
+    |   |---list
+    |   |---version
+    |   |---pkg
+    |   |---unpkg
+    |   |---install
+    |   |---uninstall
+    |
+    |---dependencies
+        |---control
+        |---get
+        |---dbs
+```

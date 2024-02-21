@@ -1,4 +1,6 @@
 
+all: lpk
+
 lpk: main.o help.o version.o io.o
 	gcc target/lib/*.o -o target/lpk
 
@@ -11,9 +13,9 @@ help.o: src/operation/help.c
 version.o: src/operation/version.c
 	gcc src/operation/version.c -c -o target/lib/version.o
 
-io.o: src/io/write.c
-	gcc src/io/write.c -c -o target/lib/io.o
+io.o: src/io/write/write.c
+	gcc src/io/write/write.c -c -o target/lib/io.o
 
 clean:
-	rm target/lpk
 	rm -r target/lib/*.o
+	rm target/lpk
